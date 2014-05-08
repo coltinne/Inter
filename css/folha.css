@@ -1,0 +1,159 @@
+﻿@charset "UTF-8";
+
+body
+{
+    background-color: rgb(175, 190, 246);
+}
+
+div#interface
+{
+    width: auto;
+    height: auto;
+    background-color: #ffffff;
+    margin: 20px auto 200px auto;
+    box-shadow: 1px 1px 15px azure;
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px 10px;
+}
+
+/*formatação de img*/
+figure.logo
+{
+    position: relative;
+    height: 170px;
+    width: 120px;
+}
+
+    figure.logo img
+    {
+        width: 120px;
+        height: 130px;
+        padding-top: 30px;
+    }
+
+figure.imgMenu img
+{
+    width: 140px;
+    height: 110px;
+    margin-left: 40px;
+    margin-top: -30px;
+    margin-bottom: auto;
+    float: right;
+}
+
+
+/*
+    
+figure.logo figcaption{
+    position: absolute;
+    font-family: Arial, sans-serif;
+    color: #0B658A;
+    font-size: 8pt;
+    top: 160px; 
+ 
+}
+ */
+
+/*formatação de menu*/
+
+
+nav#menu
+{
+    display: block;
+    float: right;
+    /*position: fixed;*/
+}
+
+
+    nav#menu ul
+    {
+        list-style: none;
+        text-transform: uppercase;
+        position: relative;
+        top: -20px;
+        margin: 50px auto auto auto;
+    }
+
+    nav#menu li
+    {
+        display: inline-block;
+        background-color: rgb(175, 190, 246);
+        padding: 10px;
+        margin: 5px;
+        transition: 1s;
+        border-radius: 10px 10px;
+      
+    }
+
+        nav#menu li:hover
+        {
+            background-color: rgba(55, 174, 243, 0.99);
+            box-shadow: 5px 0px 8px rgb(175, 190, 246);
+            border-radius: 10px 10px;
+         
+        }
+   
+
+    nav#menu a
+    {
+        color: black;
+        text-decoration: none;
+    }
+
+        nav#menu a:hover
+        {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+/*CABEÇALHO*/
+header#cabecalho
+{
+    margin: -5px auto 5px auto;
+    width: auto;
+    height: 200px;
+    background-color: #ffffff;
+    border-radius: 10px 10px;
+}
+    /**/
+    header#cabecalho h1
+    {
+        font-family: Arial, sans-serif;
+        font-size: 30px;
+        color: #0B658A;
+        margin-left: 160px;
+        margin-top: -100px;
+        padding-top: 0px;
+        padding-left: 10px;
+        text-shadow: 1px 1px 1px black;
+    }
+
+    header#cabecalho h2
+    {
+        font-family: Arial;
+        font-size: 15px;
+        color: black;
+        padding: 10px;
+        margin-left: 170px;
+        margin-top: -30px;
+        margin-bottom: -30px;
+    }
+
+/*corpo*/
+section#corpo
+{
+    display: block;
+    margin: 20px 20px 20px 20px;
+}
+
+/*Rodapé*/
+footer#rodape
+{
+    border-top: 1px solid black;
+    margin: 20px 20px 20px 20px;
+}
+
+    footer#rodape p
+    {
+        text-align: center;
+    }

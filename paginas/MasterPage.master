@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="../css/folha.css" rel="stylesheet" />
+    <link href="../css/questionario.css" rel="stylesheet" />
+    <script src="../script/funcoes.js"></script>
+    <title>Viva no Azul</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header id="cabecalho">
+
+        <figure class="logo">
+            <img id="logo" src=" ../img/logo.jpg" />
+            <figcaption></figcaption>
+
+        </figure>
+
+
+        <h1>Viva no Azul</h1>
+        <h2>Fatec Guaratinguetá</h2>
+
+        <figure class="imgMenu">
+            <img id="imgMenu" src="../img/cifrao.png" />
+
+
+
+            <nav id="menu">
+
+                <ul>
+                    <li onmouseover="mudaImg('../img/home.png')" onmouseout="  mudaImg('../img/cifrao.png')">Aplicar</li>
+                    <li onmouseover="mudaImg('../img/interrogacao.png')" onmouseout=" mudaImg('../img/cifrao.png')">EDITAR</li>
+                    <li onmouseover="mudaImg('../img/estatistica.png')" onmouseout=" mudaImg('../img/cifrao.png')">CRIAR</li>
+                    <li onmouseover="mudaImg('../img/estatistica.png')" onmouseout=" mudaImg('../img/cifrao.png')">estatísticas</li>
+                </ul>
+
+            </nav>
+
+        </figure>
+
+
+
+    </header>
+
+    <div id="interface">
+        <section id="corpo">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <footer id="rodape">
+                <p> FATEC Guaratinguetá  </p>
+            </footer>
+
+        </section>
+    </div>
+
+</body>
+</html>
