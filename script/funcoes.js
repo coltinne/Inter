@@ -1,29 +1,10 @@
 ﻿
-
 function mudaImg(img) {
     document.getElementById("imgMenu").src = img;
 }
 
-
-
-
-var id = 2;
 var valor = 0;
-function novoCampo() {
-    var inp = document.createElement("input");
-    inp.setAttribute("id", id);
-    var lab = document.createElement("label");
-    lab.setAttribute("id", "alternativa" + id);
-    var lab_content = document.createTextNode("Alternativa " + id + ": ");
-    var quebra = document.createElement("br");
-    lab.appendChild(lab_content);
-    var inpP = document.getElementById(id - 1);
-    var parentInp = inpP.parentNode;
-    parentInp.insertBefore(lab, inpP.nextSibling);
-    parentInp.insertBefore(inp, lab.nextSibling);
-    parentInp.insertBefore(quebra, lab);
-    ++id;
-}
+var pontos = null;
 
 function getTxtBox() {
     return '<label id="alternativa'+valor+'" class="lbl">Alternativa: </label>'
@@ -56,6 +37,15 @@ function RecreateDynamicTextboxes() {
         }
         document.getElementById("TextBoxContainer").innerHTML = html;
     }
+}
+
+function calculaPerfil(quantidade) {
+    alert("kk");
+    //document.getElementById('<%=lbl_text.ClientID%>').value = "asdasd";
+    alert("kk2");
+    var radio = document.getElementById('<%=rbl_alternativas0.ClientID%>');
+    alert("kkX");
+    alert("kk3");
 }
 
 window.onload = RecreateDynamicTextboxes;
