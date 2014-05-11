@@ -9,7 +9,6 @@ using System.Web.UI.WebControls;
 
 public partial class paginas_Questionario : System.Web.UI.Page
 {
-    string pontos;    
     protected void Page_Load(object sender, EventArgs e)
     {
     }
@@ -19,19 +18,25 @@ public partial class paginas_Questionario : System.Web.UI.Page
     }
     protected void btn_enviar_Click(object sender, EventArgs e)
     {
-        for (int i = 0; i < 11; i++)
-        {
-            string teste = "rbl_alternativas" + i + ".SelectedValue";
-            pontos += teste;
-        }
-        //this.pontos = pontos;
-        //Session["pontos"] = this.pontos;
-        //lbl_text.Text = Session["pontos"].ToString();
-        lbl_text.Text = pontos;
+        int pontos = 0;
+        pontos += int.Parse(rbl_alternativas0.SelectedValue);
+        pontos += int.Parse(rbl_alternativas1.SelectedValue);
+        pontos += int.Parse(rbl_alternativas2.SelectedValue);
+        pontos += int.Parse(rbl_alternativas3.SelectedValue);
+        pontos += int.Parse(rbl_alternativas4.SelectedValue);
+        pontos += int.Parse(rbl_alternativas5.SelectedValue);
+        pontos += int.Parse(rbl_alternativas6.SelectedValue);
+        pontos += int.Parse(rbl_alternativas7.SelectedValue);
+        pontos += int.Parse(rbl_alternativas8.SelectedValue);
+        pontos += int.Parse(rbl_alternativas9.SelectedValue);
+        pontos += int.Parse(rbl_alternativas10.SelectedValue);
+        Session["pontos"] = pontos;
+        Response.Redirect("Resultado.aspx");
+
     }
 
     protected void rbl_alternativas0_SelectedIndexChanged(object sender, EventArgs e)
     {
-        
+
     }
 }

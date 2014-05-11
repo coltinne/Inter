@@ -12,18 +12,18 @@
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txb_nomeQuestao" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
         <br />
         <div id="TextBoxContainer">
-            <input type="text" name="textfield" id="controle" runat="server" hidden="hidden">
+            <input type="text" name="textfield" id="controle" runat="server" hidden="hidden"/>
             <label id="alternativa1" class="lbl">Alternativa:</label>
-            <input type="text" name="textfield" id="txt_0" runat="server">
-            </br>
+            <input type="text" name="textfield" id="txt_0" runat="server"/>
+            <br/>
             <label id="alternativa2" class="lbl">Alternativa:</label>
-            <input type="text" name="textfield" id="txt_1" runat="server">
-            </br>
+            <input type="text" name="textfield" id="txt_1" runat="server"/>
+            <br/>
             <label id="alternativa3" class="lbl">Alternativa:</label>
-            <input type="text" name="textfield" id="txt_2" runat="server">
+            <input type="text" name="textfield" id="txt_2" runat="server"/>
         </div>
-        <input type="submit" name="Submit" value="+ Alternativa" onclick="novoTextDiv(); return false;">
-        </br>
+        <input type="submit" name="Submit" value="+ Alternativa" onclick="novoTextDiv(); return false;"/>
+        <br/>
         <asp:Button ID="btn_novo" runat="server" Text="Nova Pergunta" OnClick="btn_novo_Click" />
         <asp:Button ID="btn_enviar" runat="server" Text="Finalizar" OnClick="btn_enviar_Click" />
     </form>

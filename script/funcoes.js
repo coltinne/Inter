@@ -23,6 +23,7 @@ function removeTextBox(div) {
     document.getElementById("TextBoxContainer").removeChild(div.parentNode);
 }
 
+
 function setValor() {
     PageMethods.setValor(valor);
 }
@@ -40,12 +41,24 @@ function RecreateDynamicTextboxes() {
 }
 
 function calculaPerfil(quantidade) {
-    alert("kk");
-    //document.getElementById('<%=lbl_text.ClientID%>').value = "asdasd";
-    alert("kk2");
-    var radio = document.getElementById('<%=rbl_alternativas0.ClientID%>');
-    alert("kkX");
-    alert("kk3");
+    //Get the radiobuttonlist reference
+    var radio = document.getElementsByName('<%= rbl_alternativas0 %>');
+
+    //local variable to store selectedvalue
+    var selectedvalue;
+
+    alert(radio.length);
+
+    //loop through the items in radiobuttonlist
+    for (var j = 0; j <= radio.length; j++) {
+        alert("for 1");
+        if (radio[j].checked) {
+            alert("for 2");
+            selectedvalue = radio[j].value;
+            alert(selectedvalue);
+            break;
+        }
+    }
 }
 
 window.onload = RecreateDynamicTextboxes;
