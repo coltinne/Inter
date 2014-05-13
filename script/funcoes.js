@@ -9,7 +9,7 @@ var pontos = null;
 function getTxtBox() {
     return '<label id="alternativa'+valor+'" class="lbl">Alternativa: </label>'
             +'<input type="text" name="textfield" id="txt_'+valor+'">'
-            +'<input type="button" value="Remove" onclick = "removeTextBox(this)" />';
+            + '<input type="button" value="Remove" onclick = "removeTextBox(this)" />';
 }
 
 function novoTextDiv() {

@@ -1,11 +1,82 @@
 ﻿@charset "UTF-8";
+
 body {
-
 }
 
-lable.lbl
-{
-  font-family:Arial;
-  color: azure;
+lable {
 }
 
+.titulo {
+    font-family: Arial;
+    font-size: 20px;
+    color: rgb(56, 55, 55);
+    font-weight: bolder;
+    margin: 15px 20px 15px 15px;
+}
+
+.alternativa {
+    font-family: Calibri;
+    color: rgb(118, 114, 114);
+    font-size: 15px;
+    margin: 15px 20px 15px 15px;
+}
+
+.tituloQuestao {
+    font-family: Calibri;
+    font-weight: bold;
+    color: rgb(118, 114, 114);
+    font-size: 18px;
+    margin: 15px 20px 15px 15px;
+}
+
+.botao {
+    font-size: 15px;
+    margin: 10px 10px 10px 10px;
+    font-family: Calibri;
+    color: rgb(105, 105, 105);
+    font-size: 15px;
+}
+
+.texto {
+    font-family: Calibri;
+    font-weight: bold;
+    color: rgb(105, 105, 105);
+    font-size: 18px;
+    margin: 15px 10px 10px 10px;
+}
+
+.textoAlerta {
+    font-family: Calibri;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    font-size: 18px;
+    margin: 15px 10px 10px 10px;
+}
+
+.caixaTexto {
+    font-family: Calibri;
+    color: rgb(105, 105, 105);
+    font-size: 15px;
+}
+
+.caixaAlternativa {
+    font-family: Calibri;
+    color: rgb(105, 105, 105);
+    font-size: 15px;
+    width: 207px;
+}
+
+div#TextBoxContainer {
+    font-family: Calibri;
+    font-weight: bold;
+    color: rgb(105, 105, 105);
+    font-size: 16px;
+    margin: 15px 10px 10px 10px;
+}
+
+    div#TextBoxContainer input {
+        font-family: Calibri;
+        color: rgb(105, 105, 105);
+        font-size: 15px;
+        width: 250px;
+    }

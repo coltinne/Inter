@@ -19,6 +19,7 @@ public partial class paginas_Questionario : System.Web.UI.Page
     protected void btn_enviar_Click(object sender, EventArgs e)
     {
         int pontos = 0;
+        //Pega o valor dos radios buttons selecionados
         pontos += int.Parse(rbl_alternativas0.SelectedValue);
         pontos += int.Parse(rbl_alternativas1.SelectedValue);
         pontos += int.Parse(rbl_alternativas2.SelectedValue);
@@ -30,8 +31,8 @@ public partial class paginas_Questionario : System.Web.UI.Page
         pontos += int.Parse(rbl_alternativas8.SelectedValue);
         pontos += int.Parse(rbl_alternativas9.SelectedValue);
         pontos += int.Parse(rbl_alternativas10.SelectedValue);
-        Session["pontos"] = pontos;
-        Response.Redirect("Resultado.aspx");
+        Session["pontos"] = pontos; //Passa o valor para sessao
+        Response.Redirect("Resultado.aspx"); //Redireciona para o resultado
 
     }
 

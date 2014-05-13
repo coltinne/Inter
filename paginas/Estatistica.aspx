@@ -6,7 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <form id="Form1" runat="server" >
-        <asp:Label ID="lbl_selecao" runat="server" Text="Selecione o tipo de pesquisa"></asp:Label>
+        <asp:Label ID="lbl_selecao" runat="server" Text="Selecione o tipo de pesquisa" CssClass="texto"></asp:Label>
         <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True">
         </asp:DropDownList>
         <asp:MultiView ID="MultiView1" runat="server" OnActiveViewChanged="MultiView1_ActiveViewChanged">

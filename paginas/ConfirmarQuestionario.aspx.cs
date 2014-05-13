@@ -10,7 +10,8 @@ public partial class paginas_ConfirmarQuestionario : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        Questionario quest = (Questionario)Session["questionario"];
+        Questionario quest = (Questionario)Session["questionario"]; //Istancia o obj questionario passando a sessao
+        //Passa os valores para os labels
         lbl_nomeQuestionario.Text = quest.NomeQuestionario;
         lbl_alternativa1.Text = quest.NomeQuestao[0].ToString();
         lbl_alternativa2.Text = quest.NomeQuestao[1].ToString();
