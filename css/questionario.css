@@ -80,3 +80,10 @@ div#TextBoxContainer {
         font-size: 15px;
         width: 250px;
     }
+
+div#grafico{
+    width: 800px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}

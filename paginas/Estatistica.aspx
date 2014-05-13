@@ -5,16 +5,20 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <script src="../script/FusionCharts.js"></script>
+    <script src="../script/jquery.min.js"></script>
     <form id="Form1" runat="server" >
+        <script src="../script/FusionCharts.js"></script>
         <asp:Label ID="lbl_selecao" runat="server" Text="Selecione o tipo de pesquisa" CssClass="texto"></asp:Label>
-        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True">
+        <asp:DropDownList ID="ddl_pesquisa" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+            <asp:ListItem Selected="True">None</asp:ListItem>
+            <asp:ListItem Value="0">Classificação</asp:ListItem>
+            <asp:ListItem Value="1">Idade</asp:ListItem>
+            <asp:ListItem Value="2">Semestre</asp:ListItem>
         </asp:DropDownList>
-        <asp:MultiView ID="MultiView1" runat="server" OnActiveViewChanged="MultiView1_ActiveViewChanged">
-        </asp:MultiView>
-        <asp:MultiView ID="MultiView2" runat="server" OnActiveViewChanged="MultiView1_ActiveViewChanged">
-        </asp:MultiView>
-        <asp:MultiView ID="MultiView3" runat="server" OnActiveViewChanged="MultiView1_ActiveViewChanged">
-        </asp:MultiView>
+        <br />
+        <div id ="grafico"><asp:Literal ID="ltl_chart" runat="server"></asp:Literal></div>
+        
     </form>
 </asp:Content>
 
