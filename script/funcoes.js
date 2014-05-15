@@ -3,23 +3,32 @@ function mudaImg(img) {
     document.getElementById("imgMenu").src = img;
 }
 
-var valor = 0;
+var valor = 2;
 var pontos = null;
 
 function getTxtBox() {
-    return '<label id="alternativa'+valor+'" class="lbl">Alternativa: </label>'
-            +'<input type="text" name="textfield" id="txt_'+valor+'">'
-            + '<input type="button" value="Remove" onclick = "removeTextBox(this)" />';
+    return '<label id="alternativa' + valor + '" class="lbl" runat="server">Alternativa: </label>'
+            + '<input type="text" name="textfield" id="txt_' + valor + '" runat="server"/>'
+            + ' <label id="pontos' + valor + '" class="lbl" runat="server">Pontos: </label>'
+            + ' <input type="text" name="textfield" id="txt_p' + valor + '" runat="server"/>'
+            + '<input type="button" value="Remove" onclick = "removeTextBox(this)" runat="server"/>';
 }
 
 function novoTextDiv() {
-    var div = document.createElement('DIV');
-    div.innerHTML = getTxtBox();
-    valor++;
-    document.getElementById("TextBoxContainer").appendChild(div);
+    if (valor < 6) {
+        var div = document.createElement('DIV');
+        div.innerHTML = getTxtBox();
+        valor++;
+        document.forms.namedItem("textfield").setAttribute("type", "button");
+        document.getElementById("TextBoxContainer").appendChild(div);
+    } else {
+        alert("Você já adicionou o valor máximo de alternativas");
+    }
+
 }
 
-function removeTextBox(div) {
+function removeTextBox(div, regredir) {
+    valor--;
     document.getElementById("TextBoxContainer").removeChild(div.parentNode);
 }
 
@@ -27,7 +36,6 @@ function removeTextBox(div) {
 function setValor() {
     PageMethods.setValor(valor);
 }
-
 
 function RecreateDynamicTextboxes() {
     var values = eval('<%=Values%>');

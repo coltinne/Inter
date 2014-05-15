@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class paginas_CriarQuestionario : System.Web.UI.Page
 {
-    Questionario quest = new Questionario(); //Instancia o Objeto Questionario
+    Mod_modelos quest = new Mod_modelos(); //Instancia o Objeto Questionario
     protected void Page_Load(object sender, EventArgs e)
     {
         
@@ -18,7 +18,7 @@ public partial class paginas_CriarQuestionario : System.Web.UI.Page
     }
     protected void btn_continuar_Click(object sender, EventArgs e)
     {
-        quest.NomeQuestionario = txb_nomeQuestionario.Text; //Passa o texto do textBox Para o obj Questionario
+        quest.NomeModelo = txb_nomeQuestionario.Text; //Passa o texto do textBox Para o obj Questionario
         Session["questionario"] = quest; //Passa o obj Questionario para sessao
         Response.Redirect("CriarQuestao.aspx"); //Redireciona para pagina de criar alternativas
     }
