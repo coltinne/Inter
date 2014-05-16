@@ -8,5 +8,21 @@ using System.Web;
 /// </summary>
 public class Clas_classificacoes
 {
-	
+    int _codigoClassificacao;
+    double _pontoClassificacao;
+    string _descricaoClassificacao;
+    string _nomeClassificacao;
+
+    public double PontoClassificacao
+    {
+        get { return _pontoClassificacao; }
+        set { _pontoClassificacao = value; }
+    }
+
+
+    public int CodigoClassificacao
+    {
+        get { return _codigoClassificacao; }
+        set { _codigoClassificacao = value; }
+    }
 }
