@@ -9,6 +9,9 @@
         <asp:TextBox ID="txb_nomeQuestionario" runat="server" OnTextChanged="TextBox1_TextChanged" CssClass="caixaTexto" Width="258px"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" CssClass="textoAlerta" runat="server" ErrorMessage="Preenchimento Obrigatório" ControlToValidate="txb_nomeQuestionario"></asp:RequiredFieldValidator>
         <br />
+        <asp:Label ID="lbl_nomeEvento" runat="server" CssClass="texto" Text="Nome do Evento"></asp:Label>
+        <asp:DropDownList ID="ddl_nomeEvento" CssClass="caixaTexto" runat="server">
+        </asp:DropDownList>
         <br />
 
         <asp:Button ID="btn_continuar" runat="server" Text="Continuar" CssClass="botao" OnClick="btn_continuar_Click"  />
