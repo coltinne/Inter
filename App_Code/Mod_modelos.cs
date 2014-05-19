@@ -9,7 +9,7 @@ using System.Web;
 /// </summary>
 public class Mod_modelos
 {
-    ArrayList questao = new ArrayList();
+    ArrayList pergunta = new ArrayList();
     string _eventoNome;
     int _codigoModelo;
     string _nomeModelo;
@@ -61,10 +61,10 @@ public class Mod_modelos
         set { _eventoCodigo = value; }
     }
 
-    public ArrayList Questao
+    public ArrayList Pergunta
     {
-        get { return questao; }
-        set { questao = value; }
+        get { return pergunta; }
+        set { pergunta = value; }
     }
 
     public string NomeModelo

@@ -26,7 +26,7 @@
                 <ul>
                     <li><a href="Questionario.aspx">APLICAR</a></li>
                     <!---<li><a href="#">EDITAR</a></li>-->
-                    <li><a href="CriarQuestionario.aspx">CRIAR</a></li>
+                    <li><a href="CriarModelo.aspx">CRIAR</a></li>
                     <li><a href="Estatistica.aspx">ESTATÍSTICAS</a></li>
                 </ul>
 
